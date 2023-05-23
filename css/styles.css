@@ -1,0 +1,229 @@
+body {
+    margin: 0px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    background-color: #292e31;
+    color: #fff;
+}
+html, body {height:100%;}
+p {
+    line-height: 2;
+    font-size: calc(0.5rem + 0.390625vw);
+}
+
+h1 {
+    font-family: 'Playball', cursive;
+    font-size: calc(3.5rem + 0.390625vw);
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(1.75rem + 0.390625vw);
+    font-weight: normal;
+    
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(1rem + 0.390625vw);
+}
+hr {
+    border-style: dashed none none;
+    border-color: #92a2b1;
+    width: 70%;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: #bd9dff;
+}
+
+
+/************************************************************CLASSES************************************************************/
+.top {
+    background-color: #010A10;
+    height:100%;
+    width:100%;
+    display: flex;
+    position: relative;
+    z-index: -2;
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.top-heading {
+    position: relative;
+    border-radius: 8px;
+    padding: 3rem;
+    margin: auto; 
+    background: #010A10;
+}
+
+.top-heading::after,
+.top-heading::before {
+    content: "";
+    position: absolute;
+    inset: -0.25rem;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        #8447ff,
+        #b36e9e,
+        #ffad00,
+        #b36e9e,
+        #8447ff
+      );
+    border-radius: inherit; 
+    animation: spin 5s linear infinite;
+}
+
+.gradient-hr {
+    margin: 1rem auto;
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #8447ff,
+        #ffad00
+      );
+}
+
+.inv-gradient-hr {
+    margin: 1rem auto;
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #ffad00,
+        #8447ff
+      );
+}
+
+.top-heading::after {
+    filter: blur(3.5rem);
+}
+
+.purp-text {
+    color: #8447FF;
+}
+
+.yellow-text {
+    font-weight: bold;
+    color: #ffad00;
+}
+
+.bottom-container {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #010A10;
+}
+
+.profile {
+    padding: 5rem;
+}
+
+.profile-text {
+    margin: 0 auto 0 auto;
+    max-width: 50ch;
+}
+
+.bottom-text {
+    color: #F5F5F5;
+    font-size: 0.75rem;
+    padding: 20px 0px 0px;
+}
+
+.footer-link {
+    margin: auto 20px auto 20px;
+}
+
+.middle-text{
+    margin: 40px auto 60px auto;
+}
+
+
+.About {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.About > * {
+    flex: 1 1 55ch;
+}
+
+.about-row{
+    margin: 0 5rem;
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 2;
+}
+
+
+.profile-img {
+    border: solid 2px;
+    border-color: #a2a5a6;
+    border-radius: 50%;
+    max-width: 12rem;
+}
+
+.sonar-img {
+    max-width: 500px;
+}
+
+.top-cloud{
+    position: absolute;
+    right: 25%;
+    top: 50px;
+}
+
+.bottom-cloud{
+    position: absolute;
+    left: 20%;
+}
+
+.sonar-container {
+    text-align: center;
+}
+.clean-text {
+    max-width: 75ch;
+    margin: 1.75rem auto 0;
+}
+
+
+.btn {
+    -webkit-border-radius: 15;
+    -moz-border-radius: 15;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family:  'Montserrat', sans-serif;
+    background: #010A10;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    color: #ffad00;
+    text-decoration: none;
+  }
+
+
+  
+@keyframes spin {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .top-heading {
+        max-width: 20rem;
+    }
+  }
